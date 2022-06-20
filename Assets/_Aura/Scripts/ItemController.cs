@@ -10,6 +10,7 @@ using System;
 /// </summary>
 public class ItemController : MonoBehaviour, IPointerDownHandler
 {
+    //reference to which item type the item icon is displaying
     public ItemType itemType;
 
     public void OnPointerDown(PointerEventData eventData)
@@ -18,6 +19,8 @@ public class ItemController : MonoBehaviour, IPointerDownHandler
         WorldUIInterface.Instance.InitInterface(itemType);
     }
 }
+
+//description of Item types that can be stored in inventory
 public enum ItemType
 {
     Gear,
